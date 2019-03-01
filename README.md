@@ -23,21 +23,39 @@
 
 
 # 项目运行
-
-  **注意：由于涉及到的 ES6 等新属性，node 需要 6.0 以上版本**
     
-    npm install  或 yarn
+    ```
+    克隆项目
 
-*   开发模式
+    git clone git@github.com:hangjob/vue-multiple-webpack4-template.git
+    ```
+
+    ```
+    安装依赖
+
+    npm install  或 yarn
+    ```
+
+    ```
+    开发模式
+
     npm run dev
 
     里面已经写好了两个入口文件，启动后可直接访问
     http://localhost:3000/home.html
     http://localhost:3000/login.html
+    ```
 
-*   打包模式
+    ```
+    ```
+    
+    打包模式
+
     npm run build
+    
     打包后生成文件目录
+
+    ```
     ![此处输入图片的描述][1]
 
 # 文件解释
