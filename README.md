@@ -131,7 +131,7 @@
 					test: /node_modules/,
 					chunks: "initial",  //只对入口文件处理
 					name: "common", //配置公共模块名称
-                    minChunks: 2, //表示被引用次数，默认为1,比如在项目中有两处引用到一样的模块就会抽离到公共模块下
+                    			minChunks: 2, //表示被引用次数，默认为1,比如在项目中有两处引用到一样的模块就会抽离到公共模块下
 					maxInitialRequests: 5, // 最大的初始化加载次数，默认为1
 					minSize: 0 //表示在压缩前的最小模块大小，默认为0
                 }
