@@ -20,23 +20,21 @@
 ├── postcss.config                              // 样式添加前缀
 ├── pages.js                                    // 多页面配置项
 ```
-
-
 # 项目运行
     
-    ```
+   
+    
     克隆项目
 
     git clone git@github.com:hangjob/vue-multiple-webpack4-template.git
-    ```
-
-    ```
+   
+  
     安装依赖
 
     npm install  或 yarn
-    ```
+   
 
-    ```
+  
     开发模式
 
     npm run dev
@@ -44,19 +42,17 @@
     里面已经写好了两个入口文件，启动后可直接访问
     http://localhost:3000/home.html
     http://localhost:3000/login.html
-    ```
-
-    ```
-    ```
+  
     
     打包模式
 
     npm run build
-    
-    打包后生成文件目录
 
-    ```
-    ![此处输入图片的描述][1]
+    打包后生成文件目录
+    
+![此处输入图片的描述][1]
+
+
 
 # 文件解释
 
