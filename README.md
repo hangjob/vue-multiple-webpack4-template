@@ -93,8 +93,8 @@
         port: 3000,
         hot: true,
         progress: false, //记录条
-        contentBase: path.resolve(__dirname, '../public'), //表示的是告诉服务器从哪里提供内容
-        // publicPath: path.resolve(__dirname, '../dist'),
+        contentBase: '/', //contentBase默认是当前的工作目录，当它查不到打包在内存中的资源的时候，它就会到contentBase中去找
+        publicPath: '/', //https://blog.csdn.net/lhjuejiang/article/details/80243975 解释devServer
         compress: true //开启gzip压缩
     }
     ```

@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        home
+        home2ss
     </div>
 </template>
 <script>
@@ -19,7 +19,7 @@ export default {
     .home{
         background: red;
         width: 100px;
-        height: 100px;
+        height: 200px;
         background: url('../../assets/003.jpg') no-repeat center;
     }
 </style>
