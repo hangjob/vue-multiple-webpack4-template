@@ -19,10 +19,20 @@ module.exports = webpackMerge(baseConfg,{
     //https://juejin.im/post/5bb085dd6fb9a05cd24da5cf 参考链接
     devServer:{
         port: 3000,
-        hot: true,
-        progress: true, //记录条
+        inline:true, //开启页面自动刷新
+        lazy:false, //不启动懒加载
+        hot: true, //开启热点
+        quiet:false, //控制台中不输出打包的信息
+        progress: true, //显示打包的进度
         contentBase: '/', //contentBase默认是当前的工作目录，当它查不到打包在内存中的资源的时候，它就会到contentBase中去找
         publicPath: '/', //https://blog.csdn.net/lhjuejiang/article/details/80243975 解释devServer
-        compress: true //开启gzip压缩
+        compress: true, //开启gzip压缩
+        proxy: {    //配置代理
+            '/api': {
+                target: 'https://api.github.com',
+                pathRewrite: {'^/api' : ''},
+                changeOrigin: true
+            }
+        }
     }
 })

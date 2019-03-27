@@ -1,6 +1,7 @@
 <template>
     <div class="home">
         home2ss
+        <img src="https://www.vipbic.com/uploads/20181029/ea10da94c6e00cee57092785366b5fd2.jpg">
     </div>
 </template>
 <script>

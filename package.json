@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --config build/webpack.config.dev.js",
     "build": "webpack --config build/webpack.config.prod.js"
   },
@@ -48,6 +47,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.11",
-    "vue": "^2.6.7"
+    "vue": "^2.6.7",
+    "vuex": "^3.1.0"
   }
 }

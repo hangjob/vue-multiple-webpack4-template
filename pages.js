@@ -13,7 +13,7 @@ module.exports = {
                 removeAttributeQuotes: false, //删除属性的双引号
                 collapseInlineTagWhitespace: true //折叠一行
             },
-            chunks: ['home','common'],  // 引入公共模块
+            chunks: ['home','common'],  // 引入公共模块 ---在build/webpack.config.js下配置的公共模块--110行
             hash: true //生成带有hash值
         },
         {
