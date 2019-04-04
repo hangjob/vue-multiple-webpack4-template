@@ -8,4 +8,4 @@ import Login from '../src/page/login/login.vue'
 new Vue({
     el: '#app',
     render: h => h(Login)
-})
+}) 

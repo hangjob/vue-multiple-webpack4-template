@@ -35,7 +35,7 @@ multiple.pages.forEach((value, index) => {
 
 
 
-
+//阔以参考 https://blog.pokehome.com/iviewui%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%9E%84%E5%BB%BA/
 const baseConfg = {
     entry:entry,
     output: {
@@ -43,11 +43,17 @@ const baseConfg = {
         filename: 'js/[name]/[name].js',
         publicPath: './', //指定路径加到静态资源路径前面
     },
+    stats: {
+        // 如果有 抛异常 Entrypoint mini-css-extract-plugin = *
+        //https://github.com/webpack-contrib/mini-css-extract-plugin/issues/39
+        entrypoints: false,
+        children: false
+    },
     module: {
         rules:[
             {
                 test: /\.js$/,
-                use: 'babel-loader',
+                use: 'babel-loader?cacheDirectory', //缓存loader执行结果 发现打包速度已经明显提升了
                 exclude: /node_modules/ 
             },
             {
@@ -58,7 +64,6 @@ const baseConfg = {
                         insertAt: 'top' //将style插入到顶部
                     }
                 },MiniCssExtractPlugin.loader,'css-loader','postcss-loader'], //style-loader 把css插入到header标签中
-                exclude: /node_modules/ 
             },
             {
                 test: /\.less$/,
@@ -73,7 +78,7 @@ const baseConfg = {
             {
                 // https://github.com/crlang/easy-webpack-4/blob/master/webpack.config.js 处理图片和CSS加载资源路径
                 // https://segmentfault.com/q/1010000013910511 
-                test: /\.(jpg|png|ico|jpeg|gif)$/,
+                test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
                 use: [{
                     loader: "url-loader",
                     options: {
@@ -107,8 +112,8 @@ const baseConfg = {
 					test: /node_modules/,
 					chunks: "initial",  //只对入口文件处理
 					name: "common",
-                    minChunks: 5, //表示被引用次数，默认为1；5说明如果项目中引用次数大过5次，则打包成公共模块
-					maxInitialRequests: 5, // 最大的初始化加载次数，默认为1
+                    minChunks: 2, //表示被引用次数，默认为1；5说明如果项目中引用次数大过5次，则打包成公共模块
+					maxInitialRequests: 2, // 最大的初始化加载次数，默认为1
 					minSize: 0 //表示在压缩前的最小模块大小，默认为0
                 }
 			}

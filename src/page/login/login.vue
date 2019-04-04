@@ -1,6 +1,7 @@
 <template>
     <div class="login">
         login
+        <Button type="primary">Primary</Button>
     </div>
 </template>
 <script>

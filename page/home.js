@@ -10,7 +10,16 @@ import Vue from 'vue';
 
 import Home from '../src/page/home/home.vue'
 
+import iView from 'iview'
+import 'iview/dist/styles/iview.css'
+
+//状态管理
+import state from '../src/store/index';
+
+Vue.use(iView);
+
 new Vue({
     el: '#app',
+    state,
     render: h => h(Home)
 })
