@@ -41,6 +41,19 @@ module.exports = {
             },
             chunks: ['news','common'],
             hash: true //生成带有hash值
+        },
+        {
+            page: 'point',
+            entry: path.resolve(__dirname, './page/point.js'),  //指向入口文件
+            title: '这是页面3',
+            template: path.resolve(__dirname, './public/index.html'), //指向模板文件
+            filename: 'point.html',
+            minify: {
+                removeAttributeQuotes: false, //删除属性的双引号
+                collapseInlineTagWhitespace: true //折叠一行
+            },
+            chunks: ['point','common'],
+            hash: true //生成带有hash值
         }
     ]
 }
