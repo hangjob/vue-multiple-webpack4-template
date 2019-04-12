@@ -1,5 +1,5 @@
 <template>
-    <div>这是一个公共组件component-a</div>
+    <h2>这是一个公共组件component-a</h2>
 </template>
 <script>
 export default {

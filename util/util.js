@@ -8,7 +8,7 @@
  * @param {获取属性如：with，height} sName 
  */
 function getStyle(oElement, sName){
-	return oElement.currentStyle ? oElement.currentStyle[sName] : getComputedStyle(oElement, null)[sName];
+    return oElement.currentStyle ? oElement.currentStyle[sName] : getComputedStyle(oElement, null)[sName];
 }
 
 
@@ -19,9 +19,11 @@ function getStyle(oElement, sName){
  * @param {dom元素} oElement 
  */
 function isDom(oElement){
+    // eslint-disable-next-line quotes
     if(typeof HTMLElement === 'object'){
         return oElement instanceof HTMLElement;
     }else{
+        // eslint-disable-next-line quotes
         return oElement && typeof oElement === 'object' && oElement.nodeType === 1 && typeof oElement.nodeName === 'string';
     }
 }

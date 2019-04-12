@@ -1,15 +1,15 @@
 
-import Vue from 'vue'
-import Vuex from 'vuex';
+import Vue from "vue";
+import Vuex from "vuex";
 
-import state from './state';
-import getters from './getters';
-import actions from './actions';
-import mutations from './mutations';
+import state from "./state";
+import getters from "./getters";
+import actions from "./actions";
+import mutations from "./mutations";
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
-const debug = process.env.NODE_ENV !== 'procuction'
+const debug = process.env.NODE_ENV !== "procuction";
 
 export default new Vuex.Store({
     actions,
@@ -17,4 +17,4 @@ export default new Vuex.Store({
     state,
     mutations,
     strict :debug
-})
+});

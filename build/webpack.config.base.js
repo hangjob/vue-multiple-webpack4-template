@@ -9,6 +9,7 @@ const multiple = require('../pages.js')
 
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
+
 const entry = {};
 const plugins = [];
 
@@ -21,14 +22,14 @@ multiple.pages.forEach((value, index) => {
 multiple.pages.forEach((value, index) => {
     plugins.push(
         new HtmlWebpackPlugin({
-          template: value.template, //指向模板文件
-          filename: value.filename,
-          minify: {
-              removeAttributeQuotes: true, //删除属性的双引号
-              collapseInlineTagWhitespace: true //折叠一行
-          },
-          chunks: value.chunks,
-          hash: true //hash 为了开发中js有缓存效果，加入hash，这样可以有效避免缓存JS
+            template: value.template, //指向模板文件
+            filename: value.filename,
+            minify: {
+                removeAttributeQuotes: true, //删除属性的双引号
+                collapseInlineTagWhitespace: true //折叠一行
+            },
+            chunks: value.chunks,
+            hash: true //hash 为了开发中js有缓存效果，加入hash，这样可以有效避免缓存JS
         })
     )
 })

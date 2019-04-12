@@ -25,7 +25,6 @@ export default {
         //很深的一个子组件传递的数据
         parentsClick(params){
             console.log(params);
-            // 
             this.bus.$emit('toChangeTitle','这是一个通过bus组件通信')
         }
     }

@@ -16,6 +16,6 @@ const mutations = {
     CHERRY(state,num=20){
         state.cherry+=num;
     }
-}
+};
 
 export default mutations;

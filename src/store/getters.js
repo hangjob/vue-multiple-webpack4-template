@@ -8,6 +8,6 @@ const getters={
     mango: state => state.mango,
 
     cherry: state => state.cherry
-}
+};
 
 export default getters;
