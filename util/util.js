@@ -7,7 +7,7 @@
  * @param {dom元素} oElement 
  * @param {获取属性如：with，height} sName 
  */
-function getStyle(oElement, sName){
+export function getStyle(oElement, sName){
     return oElement.currentStyle ? oElement.currentStyle[sName] : getComputedStyle(oElement, null)[sName];
 }
 
@@ -18,12 +18,31 @@ function getStyle(oElement, sName){
  * 的浏览器中，类型却是有差别的，在Chrome,Opera中HTMLElement的类型为function，此时就不能用它来判断了
  * @param {dom元素} oElement 
  */
-function isDom(oElement){
-    // eslint-disable-next-line quotes
-    if(typeof HTMLElement === 'object'){
+export function isDom(oElement){
+    if(typeof HTMLElement === "object"){
         return oElement instanceof HTMLElement;
     }else{
-        // eslint-disable-next-line quotes
-        return oElement && typeof oElement === 'object' && oElement.nodeType === 1 && typeof oElement.nodeName === 'string';
+        return oElement && typeof oElement === "object" && oElement.nodeType === 1 && typeof oElement.nodeName === "string";
+    }
+}
+
+
+/**
+ * 判断浏览器
+ */
+export function getOs() {    
+    if (navigator.userAgent.indexOf("MSIE 8.0") > 0) {        
+        return "MSIE8";
+    }else if (navigator.userAgent.indexOf("MSIE 6.0") > 0) {
+        return "MSIE6";
+    }else if (navigator.userAgent.indexOf("MSIE 7.0") > 0) {
+        return "MSIE7";
+    }else if (navigator.userAgent.indexOf("Firefox") > 0) {
+        return "Firefox";
+    }
+    if (navigator.userAgent.indexOf("Chrome") > 0) {
+        return "Chrome";
+    }else {
+        return "Other";
     }
 }

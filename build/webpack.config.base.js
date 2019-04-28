@@ -118,8 +118,8 @@ const baseConfg = {
                     test: /node_modules/,
                     chunks: "initial",  //只对入口文件处理
                     name: "common",
-                    minChunks: 2, //表示被引用次数，默认为1；5说明如果项目中引用次数大过5次，则打包成公共模块
-                    maxInitialRequests: 2, // 最大的初始化加载次数，默认为1
+                    minChunks: 5, //表示被引用次数，默认为1；5说明如果项目中引用次数大过5次，则打包成公共模块
+                    maxInitialRequests: 5, // 最大的初始化加载次数，默认为1
                     minSize: 0 //表示在压缩前的最小模块大小，默认为0
                 }
             }

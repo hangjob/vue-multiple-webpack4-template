@@ -18,8 +18,18 @@ export default {
     computed:{
         ...mapGetters(['orange','mango']),
     },
+    created(next){
+        console.log(next)
+        this.test()
+    },
     mounted(){
-
+        console.log(2)
+    },
+    beforeRouteEnter(to, from, next) {
+        console.log(2222)
+    },
+    beforeRouteUpdate(to, from, next){
+        console.log(111)
     },
     methods:{
         //这里有好几种写法方式请参考官网--https://vuex.vuejs.org/zh/guide/mutations.html
@@ -41,6 +51,17 @@ export default {
         async timeoutCa(){
             var num = await this.timeout();
             console.log(num);
+        },
+        test2() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log(1)
+                    resolve()
+                }, 200)
+            })
+        },
+        async test() {
+            await this.test2()
         }
     }
 }
