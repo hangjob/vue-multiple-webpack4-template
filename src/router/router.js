@@ -27,6 +27,12 @@ export default new VueRouter({
             meta:{
                 title:"测试3"
             }
+        },
+        {
+            path:"/404",
+            name: "404", 
+            component: resolve=> require(["../page/views/views-404.vue"],resolve),
+            meta: { title: "404页面" }
         }
     ]
 });
