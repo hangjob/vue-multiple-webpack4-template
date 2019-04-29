@@ -43,7 +43,7 @@
     http://localhost:3000/home.html     //演示多页面1
     http://localhost:3000/login.html    //演示多页面2
     http://localhost:3000/news.html     //演示多页面3-引入第三方框架使用(iview)以及vuex
-    http://localhost:3000/point.html    //演示多页面4-演示引入组件及传值
+    http://localhost:3000/point.html    //演示多页面4-演示引入组件及传值($attr,$parent,bus,props,$emit)
     http://localhost:3000/ftrem.html    //演示多页面5-webpack配置rem演示自适应
     http://localhost:3000/views.html    //演示多页面6-演示vue-router常规配置以及路由拦截
     
