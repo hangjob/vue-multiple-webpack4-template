@@ -172,7 +172,7 @@
 # 说明
 
 >  如果对您有帮助，后面会持续更新，您可以点右上角 "Star" 支持一下 谢谢！ ^_^
->  如要在编译过程中遇到错误，点击[联系作者](https://www.vipbic.com/ourselves.html)
+>  如要在编译过程中遇到错误，点击[联系作者](https://www.vipbic.com/join.html)
 
 
   [1]: https://www.vipbic.com/uploads/20190301/2ffbb06148c07174e2d29dce8f69d388.png
